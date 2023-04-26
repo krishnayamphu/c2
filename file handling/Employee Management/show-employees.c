@@ -1,14 +1,6 @@
-#include<stdio.h>
-typedef struct
-{
-    char name[20];
-    int salary;
-}Employee;
-FILE *f;
-void main()
-{
-    f=fopen("employee.txt","r");
+void showEmployees(){
     Employee e;
+    f=fopen("employee.txt","r");
     if(f==NULL){
         printf("file not found");
     }else{
