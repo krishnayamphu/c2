@@ -1,19 +1,6 @@
-#include<stdio.h>
-#include<conio.h>
-typedef struct{
-    char name[20];
-    int salary;
-}Employee;
-FILE *f;
-void addEmployee();
-void main()
-{
-    addEmployee();
-}
-
 void addEmployee(){
     Employee e;
-    f=fopen("employee.txt","w");
+    f=fopen("employee.txt","a+");
     char next='y';
     while(next=='y'||next=='Y')
     {

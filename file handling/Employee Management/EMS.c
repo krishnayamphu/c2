@@ -5,6 +5,10 @@ FILE *f, *fp;
 #include "employee.c"
 #include "menu.c"
 #include "show-employees.c"
+#include "add-employee.c"
+#include "edit-employee.c"
+#include "remove-employee.c"
+#include "search-employee.c"
 void main()
 {
     int choice;
@@ -18,8 +22,24 @@ void main()
             getch();
             break;
         case 2:
-            //add employees
+            addEmployee();
+            getch();
             break;
+        case 3:
+            updateEmployee();
+            getch();
+            break;
+        case 4:
+            removeEmployee();
+            getch();
+            break;
+        case 5:
+            searchEmployee();
+            getch();
+            break;
+        case 6:
+            printf("Press ANY KEY to CONTINUE");
+            exit(0);
         default:
             printf("Invalid choice number");
             getch();

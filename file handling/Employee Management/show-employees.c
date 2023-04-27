@@ -4,9 +4,13 @@ void showEmployees(){
     if(f==NULL){
         printf("file not found");
     }else{
+      //printf("::::::::::::::::::::::::::::::::::::::::");
+        printf("\n:::::::::: ALL EMPLOYEES :::::::::::::::\n");
+        printf("\n Employee Name \t\t\tSalary\n");
+        printf("----------------------------------------\n");
         while(fread(&e,sizeof(e),1,f)){
-             printf("\nName: %s",e.name);
-             printf("\nSalary: %d",e.salary);
+            printf(" %-25s \t%-8d\n",e.name,e.salary);
+            printf("----------------------------------------\n");
         }
     }
     fclose(f);
